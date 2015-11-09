@@ -39,11 +39,13 @@ function Wrapper() {
             }
             Model.currentState.push(tempRow);
             return Model.currentState;
-        });
-         },
-    
- 
+            });
+        },
 
+        appendLine : function(lst) {
+            Model.currentState.push(lst);
+            $.post( "https://sheetsu.com/apis/0a299348", { "Num": lst[0], "Alpha" : lst[1], "Greet": lst[2], "Test Column" : lst[3] } );
+        },
 
         setData : function(val, position) {
             // 
@@ -58,7 +60,8 @@ function Wrapper() {
            return Model.getModel();
         },
 
-        updateData : function(data, position) {
+        updateData : function(pos_str) {
+            
             Model.setData(data, position);
             Model.getModel();
             return Model.currentState;
@@ -67,7 +70,7 @@ function Wrapper() {
         eventHandler : function(e) {
             // If Add Button is clicked
             if (e.target.className === "adder") {
-                this.updateData(data, end_of_list);
+                View.displayAdd();
 
             // If Delete Button is clicked
             } else if (e.target.className === "del") {
@@ -75,12 +78,23 @@ function Wrapper() {
 
             // If A Cell is Updated
             } else if (e.target.className === "data") {
-                this.updateData(val, e.target.position);
+                this.updateData(e.target.id);
 
+            } else if (e.target.className === "sub") {
+                var addList = [];
+                var input = $('.add_box').val();
+                var adds = input.split(',');
+                for (var i = 0; i < adds.length; i++) {
+                    addList.push($.trim(adds[i]));
+                }
+                Model.appendLine(adds);
+                View.removeAdd();
+                View.displayList();
+            } else if (e.target.className === "update") {
+                return View.displayList();
             }
             // Should return new copy of model after any button click.
-            console.log(Model.currentState);
-            return this.fetchData();
+            
         }
 
 
@@ -107,6 +121,7 @@ function Wrapper() {
         // Draw list
         displayList : function() {
             // From Conner and Dana
+            $('tr').remove();
             var table = $('table');
             var tabrow = document.getElementsByTagName('tr');
             var tabdat = document.getElementsByTagName('td');
@@ -128,15 +143,22 @@ function Wrapper() {
         }
 
     }
-}
+},
+
+
+        displayAdd : function() {
+            this.mainLocale.append("<input class='add_box' type=text></input>");
+            this.mainLocale.append("<button class='sub'>Submit</button>");
+        },
+
+        removeAdd : function() {
+            $('.add_box').remove();
+            $('.sub').remove();
+        }
 };
 
 Controller.fetchData();
 View.drawDisplay();
-
-
-
-
 
 
 }

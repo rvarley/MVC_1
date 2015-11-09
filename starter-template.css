@@ -17,6 +17,6 @@ table {
     padding: 2%;
 }
 
-td {
+tr, td {
     padding: .3em, .15em;
 }
