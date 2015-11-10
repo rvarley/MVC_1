@@ -1,7 +1,7 @@
- var table = $('table')
-var tabrow = document.getElementsByTagName('tr');
-var tabdat = document.getElementsByTagName('td');
-var url = "https://spreadsheets.google.com/feeds/cells/1sYkU_8raV14Bqm33dWcaksC3iMm73DH9OMsooxSMItM/od6/public/values?alt=json";
+// var table = $('table')
+// var tabrow = document.getElementsByTagName('tr');
+// var tabdat = document.getElementsByTagName('td');
+// var url = "https://spreadsheets.google.com/feeds/cells/1sYkU_8raV14Bqm33dWcaksC3iMm73DH9OMsooxSMItM/od6/public/values?alt=json";
 
 $.getJSON(url, function(data) {
     $variable = data
@@ -43,38 +43,7 @@ $(document).click(function( event ) {
    }
 });
 
-$("html").on('click', '.btn-default', function() {
-    
-       var editMode = $(this).hasClass('edit-mode'),
-           columns  = $('.table th');
-    
-    if (!editMode){
-        
-        $(this).html('Save').addClass('edit-mode');
-        
-        columns.each(function(){
-            
-            var txt = $(this).text();
-            var input = $('<input type="text">');
-            input.val(txt);
-            $(this).html(input);
-    
-        });
-        
-    } else {
-        
-        $(this).html('Edit').removeClass('edit-mode');
-        
-        columns.each(function(){
-            
-            var newName = $(this).find('input').eq(0).val();
-            $(this).html(newName);
-        
-        });
-        
-    }
-   
-}) ;   
+ 
 
 
 
