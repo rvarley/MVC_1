@@ -1,7 +1,7 @@
-// var table = $('table')
-// var tabrow = document.getElementsByTagName('tr');
-// var tabdat = document.getElementsByTagName('td');
-// var url = "https://spreadsheets.google.com/feeds/cells/1sYkU_8raV14Bqm33dWcaksC3iMm73DH9OMsooxSMItM/od6/public/values?alt=json";
+var table = $('table')
+var tabrow = document.getElementsByTagName('tr');
+var tabdat = document.getElementsByTagName('td');
+var url = "https://spreadsheets.google.com/feeds/cells/1sYkU_8raV14Bqm33dWcaksC3iMm73DH9OMsooxSMItM/od6/public/values?alt=json";
 
 $.getJSON(url, function(data) {
     $variable = data
