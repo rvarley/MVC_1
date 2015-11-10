@@ -35,13 +35,12 @@ function ModelWrapper() {
     
     }, // End getModel()
 
-    setModel : function(num_val, alpha_val, greet_val) { // input parameters
+    setModel : function(to_post) { // input parameters
 
-      var data = {
-        "Num" : num_val,
-        "Alpha" : alpha_val,
-        "Greet" : greet_val
-      };
+      var data = {};
+      $.each(to_post, function(k, v) {
+          data[model[k]["1"]] = v;
+      })
       var address = "https://sheetsu.com/apis/0a299348";
       $.post(address, data);
     }
