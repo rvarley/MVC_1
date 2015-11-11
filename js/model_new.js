@@ -21,8 +21,7 @@ var model = { // This is the object
                 }
                 model.data[value.gs$cell.col][value.gs$cell.row] = value.gs$cell.$t;
             });
-            callback(model.data); // KS added return. This is the outgoing
-                                        // data.
+            callback(model.data); 
         })
     }, 
 
