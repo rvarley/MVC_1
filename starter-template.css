@@ -10,13 +10,3 @@ ul {
     list-style: none;
 }
 
-table {
-    table-layout: auto;
-    border: 1px solid black;
-    margin: 0 auto 0;
-    padding: 2%;
-}
-
-tr, td {
-    padding: .3em, .15em;
-}
