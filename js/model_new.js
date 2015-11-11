@@ -11,7 +11,6 @@ function Wrapper() {
         data: {},
 
         getData: function(callback) {
-            Model.data = {}
             $.getJSON(Model.url, function(data) {
                 var col_high = 0;
 
@@ -24,30 +23,38 @@ function Wrapper() {
                     Model.data[value.gs$cell.col][value.gs$cell.row] = value.gs$cell.$t;
                 }); // End .each
                 callback(Model.data);
-            })
-            return Model.data
+            });
         },
 
 
-        putData: function(data) {
-            var data = {};
+        putData: function(to_post) {
+            var new_row = {};
             $.each(to_post, function(k, v) {
-                data[Model.data[k]["1"]] = v;
-            })
+                new_row[Model.data[k]["1"]] = v;
+            });
             var address = "https://sheetsu.com/apis/0a299348";
-            $.post(address, data);
+            $.post(address, new_row);
         },
 
         updateModel: function() {
             //
         }
+    };
+
+    function displayCallback(data) {
+        console.log(data);
     }
+
+    $(document).ready(function() {
+        Model.getData(displayCallback);
+    });
+
 
     var Controller = {
         modelStatus : "old",
         fetchData : function() {
             View.displayList();
-           return Model.getData();
+           return Model.getModel();
         },
 
         updateData : function(data, position) {
@@ -77,15 +84,12 @@ function Wrapper() {
 
 
     };
+
+
+
+
 }
 
+Wrapper();
 
-
-function displayCallback(data) {
-    console.log(data);
-}
-
-$(document).ready(function() {
-    model.getData(displayCallback);
-});
 
