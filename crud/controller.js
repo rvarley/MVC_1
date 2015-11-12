@@ -1,3 +1,5 @@
+// Controller only in current state
+
  var Controller = {        
         getData : function() {
             Model.data;

@@ -1,3 +1,5 @@
+// This is everything I've got from all groups put together, not compelted
+
 function Wrapper() {
     'use strict';
     var model = {};
