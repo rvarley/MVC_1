@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>JS Array CRUD - http://codeofaninja.com</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+    
+  <body>
+    <div id="inputs">
+      <table id= "myTable">
+        
+      </table>
+    </div>
+
+    <div id="actions">
+
+       <form class="enter" action="#">
+      New Entry: <input type="text" name="new">
+      <input type="submit" value="Enter">
+      </form>
+
+      <form class="choose" action="#">
+      Choose Entry: <input type="text" name="new">
+      <input type="submit" value="Choose">
+      </form>
+
+      <form class="delete" action="#">
+      Delete Entry: <input type="text" name="new">
+      <input type="submit" value="Delete">
+      </form>
+
+      <form class="refresh">
+      <input  type="button" onClick="history.go(0)" value="Refresh Page">
+      </form>
+
+    </div>
+    <div id ="results">
+      <div id="results"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="controller.js"></script>
+  </body>
+</html>
