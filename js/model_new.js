@@ -41,47 +41,55 @@ function Wrapper() {
         }
     };
 
-    function displayCallback(data) {
-        console.log(data);
-    }
-
-    $(document).ready(function() {
-        Model.getData(displayCallback);
-    });
+    
 
 
     var Controller = {
-        modelStatus : "old",
-        fetchData : function() {
-            View.displayList();
-           return Model.getModel();
+        flip: {},
+
+        alert: function() {
+            Model.getData(displayCallback);
+            View.displayTable()
         },
 
-        updateData : function(data, position) {
-            Model.setData(data, position);
-            Model.getModel();
-            return Model.currentState;
-        },
+        
 
-        eventHandler : function(e) {
-            // If Add Button is clicked
-            if (e.target.className === "adder") {
-                this.updateData(data, end_of_list);
 
-            // If Delete Button is clicked
-            } else if (e.target.className === "del") {
-                this.updateData(null, e.target.position);
+    };
 
-            // If A Cell is Updated
-            } else if (e.target.className === "data") {
-                this.updateData(val, e.target.position);
+    var View = {
+        table: $("#myTable"),
 
+        rowCount: $("#myTable tr"),
+
+        startTable: $("#button").click(function() {
+            Controller.alert();
+        }),
+
+        displayTable: function appendColumn() {
+                // var tbl = document.getElementById('my-table'), // table reference
+                //     i;
+                // open loop for each row and append cell
+                console.log(this.rowCount.size())
+                
+                
+
+
+
+            //     function() {
+            // // append, add attrib = add checkbox, add radio buttons (both with No Display)
+            // $.each(Model.data, function(){
+            //     // this.datList.append("<li>" + ???)
+            // });
+            // this.table.append('column 1 valuecolumn 2 value');
+            // this.table.append("<td>Woot</td>");
+            // this.table.append("<td>What</td>");
+            // this.table.append("<tr></tr>")
+
+             
             }
-            // Should return new copy of model after any button click.
-            console.log(Model.currentState);
-            return this.fetchData();
-        }
-
+        },
+        
 
     };
 
@@ -91,5 +99,10 @@ function Wrapper() {
 }
 
 Wrapper();
+
+function displayCallback(data) {
+    console.log(data);
+}
+
 
 
