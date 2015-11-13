@@ -1,18 +1,4 @@
-Skip to content
-This repository  
-Search
-Pull requests
-Issues
-Gist
- @DJMedhaug
- Unwatch 12
-  Star 0
- Fork 0 codeguild2015/didactic-duckCRUD_MVC
- Branch: cole  didactic-duckCRUD_MVC/js/controller_main.js
-9f9a5e4  a day ago
-@uglyboxer uglyboxer Fix undefined visuals and table style
-1 contributor
-RawBlameHistory     188 lines (156 sloc)  6.8 KB
+
 // An MVC implementation of webpage that taps the Google Sheets API
 // for interaction with a single, predefined spreadsheet.  Front end
 // is a basic Bootstrap website from template.
