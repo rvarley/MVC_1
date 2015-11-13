@@ -170,7 +170,8 @@ function MVC() {
 // Our original callback stuff
     function displayCallback(incomingData) {
         var temp_data = {};
-        console.log("incomingData in displayCallback is ", incomingData);
+        console.log("incoming:w
+        Data in displayCallback is ", incomingData);
         View.getMax(incomingData);
         View.createTable();      // Initialize view
     }
