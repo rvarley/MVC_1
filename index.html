@@ -1,5 +1,5 @@
   <!DOCTYPE html>
-<html lang="en">
+  <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,76 +7,71 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+<!--     <link rel="icon" href="../../favicon.ico">
+-->
+<title>API Project</title>
 
-    <title>API Project</title>
+<!-- Bootstrap core CSS -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+<!-- Custom styles for this template -->
 
-    <!-- Bootstrap core CSS -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-    <!-- Custom styles for this template -->
-    <link href="css/navbar-fixed-top.css" rel="stylesheet">
+</head>
 
-  </head>
+<body>
 
-  <body>
-
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-          </button>
-          <a class="navbar-brand" href="https://docs.google.com/spreadsheets/d/1sYkU_8raV14Bqm33dWcaksC3iMm73DH9OMsooxSMItM/edit#gid=0">Google Spreadsheet</a>
-        </div>
-        </div>
-      </div>
-    </nav>
-
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="https://docs.google.com/spreadsheets/d/1sYkU_8raV14Bqm33dWcaksC3iMm73DH9OMsooxSMItM/edit#gid=0">Google Spreadsheet</a>
+      </div>
+    </div>
+  </div>
+</nav>
 
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>API Project</h1>
-       
-        <div class="panel panel-primary">
-            <!-- Default panel contents -->
-            <div class="panel-heading">Table Data</div>
-            <div class="panel-body">
-            <!-- <p>...</p> -->
+<div class="container">
+
+  <!-- Main component for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <h1>API Project</h1>
+
+    <div class="panel panel-primary">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Table Data</div>
+      <div class="panel-body">
+        <!-- <p>...</p> -->
+      </div>
+
+      <!-- Table -->
+      <table class="table table-bordered table-hover table-condensed">
+
+      </table>
+    </div>
+
+        <div id="actions" class="btn-group btn-group-lg">
+
+          <form class="enter btn-group btn-group-lg" action="#" id="addrowform">
+            <input type="button" class="btn btn-default" id="addrow" value="Add Row">
+            <div class="btn-group btn-group-lg" role="group">
+              
             </div>
+          </form>
 
-            <!-- Table -->
-            <table class="table table-bordered table-hover table-condensed">
-            
-            </table>
-        </div>
-        <div class="btn-group btn-group- btn-group-justified" role="group" aria-label="entry_but">
-          <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default">Create Entry</button>
-          </div>
-          <div class="btn-group" role="group">
-            <a onClick="history.go(0)" type="button" class="btn btn-default ">Refresh</a>
-          </div>
-         
-        </div>
-         
 
-    </div> <!-- /container -->
+
+        </div> <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>   
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie-10-view-port.js"></script>
-    <script src="js/jsget.js"></script>
-    <script src="js/angular.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <script src="js/mvc.js"></script>
   </body>
-</html>
-            
-        
+  </html>
+
+
+
+
