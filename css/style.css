@@ -1,0 +1,17 @@
+body {
+        background-color: lightgrey;
+}
+
+.jumbotron {
+    overflow: scroll;
+}
+
+.panel-none {
+    overflow: scroll;
+}
+
+.panel-primary>.panel-heading  {
+    max-width: 100%;
+
+}
+
